@@ -2,7 +2,6 @@ import type { Route } from "./+types/home";
 import logo1 from "../images/imagen_muestra_1.jpeg";
 import logo2 from "../images/imagen_muestra_2.jpeg";
 import logo3 from "../images/imagen_muestra_3.jpeg";
-import { useRef, useEffect, useState } from "react";
 
 
 
