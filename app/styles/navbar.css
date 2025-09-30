@@ -1,0 +1,13 @@
+
+.navbar_fondo {
+    background-color: #2C2D5C; /* Azul oscuro */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LogoNavbarAzul {
+    height: 100px;
+    margin-right: 10px;
+}

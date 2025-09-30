@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import type { Route } from "./+types/root";
 import "./app.css";
 
@@ -42,9 +45,16 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow p-4">
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
 }
-
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   let message = "Oops!";
   let details = "An unexpected error occurred.";
