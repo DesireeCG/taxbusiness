@@ -8,5 +8,6 @@ export default [
     route("servicios", "routes/servicios.tsx"),
     route("nosotros", "routes/nosotros.tsx"),
     route("contacto", "routes/contacto.tsx"),
+    route("chessTalent", "routes/chessTalent.tsx"),
 
     ] satisfies RouteConfig;

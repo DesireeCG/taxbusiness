@@ -1,71 +1,122 @@
-import type { Route } from "./+types/home";
-import logo1 from "../images/imagen_muestra_1.jpeg";
-import logo2 from "../images/imagen_muestra_2.jpeg";
-import logo3 from "../images/imagen_muestra_3.jpeg";
+import Carrusel from "~/components/Carrusel";
+import logo_chessTalent from "../images/ajedrez-chess-talent.png";
 
-
-
-export const meta: Route.MetaFunction = () => {
-  return [
-    { title: "TaxBusiness - Soluciones Fiscales en Monterrey" },
-    {
-      name: "description",
-      content:
-        "Firma especializada en defensa fiscal, devoluciones de impuestos, auditorías SAT y consultoría jurídica con más de 20 años de experiencia.",
-    },
-    { 
-      name: "keywords", 
-      content: "defensa fiscal en Monterrey, devoluciones SAT, consultoría fiscal México, auditorías SAT" 
-    },
-  ];
-};
-
-  
 export default function Home() {
   return (
-    <div className="p-8 text-center">
-      <h1 className="text-[2.5rem] font-bold text-secondary text-center mb-4">
-        Soluciones Fiscales
-      </h1>
-      <p className="text-2xl text-[#144272] text-center mb-8">
-        Somos una firma especializada en materia fiscal integrada por abogados y contadores calificados dedicados a su servicio para brindarle las mejores alternativas legales, contando con más de 20 años de experiencia profesional que nos respaldan en este ámbito
-      </p>
-
-     <div className="overflow-x-auto scroll-smooth snap-x snap-mandatory scroll-p-8 flex gap-10 ps-8 pl-8 mb-8">
-        <div className="snap-start flex-shrink-0 w-80">
-          <img src={logo1} alt="Servicio fiscal 1" className="aspect-3/2 object-cover rounded-lg shadow" />
-          <p> Prueba 1</p>
-        </div>
-        <div className="snap-start flex-shrink-0 w-80">
-          <img src={logo2} alt="Servicio fiscal 2" className="aspect-3/2 object-cover rounded-lg shadow" />
-        </div>
-        <div className="snap-start flex-shrink-0 w-80">
-          <img src={logo3} alt="Servicio fiscal 3" className="aspect-3/2 object-cover rounded-lg shadow" />
-        </div>
-         <div className="snap-start flex-shrink-0 w-80">
-          <img src={logo1} alt="Servicio fiscal 1" className="aspect-3/2 object-cover rounded-lg shadow" />
-        </div>
-        <div className="snap-start flex-shrink-0 w-80">
-          <img src={logo2} alt="Servicio fiscal 2" className="aspect-3/2 object-cover rounded-lg shadow" />
-        </div>
-        <div className="snap-start flex-shrink-0 w-80">
-          <img src={logo3} alt="Servicio fiscal 3" className="aspect-3/2 object-cover rounded-lg shadow" />
-        </div>
-      </div>
-
-      <p className="text-2xl text-[#144272] text-center mb-8 mt-8">
-        Nuestros profesionistas, amigos y aliados estratégicos, se especializan en la solución eficaz de problemas fiscales, en la obtención de devoluciones de impuestos, atención de auditorías, en la implementación exitosa de la defensa fiscal, en consultoría jurídica, estrategia legal y comercio exterior.
-      </p>
-    
-    
-      <a
+    <div>
+      {/* Hero */}
+      <section className="bg-gradient-to-r from-[#1C547F] to-[#1D4D72] text-white py-20 text-center relative">
+        <h1 className="font-objectivity font-bold text-6xl mb-4">
+          Soluciones Fiscales
+        </h1>
+        <p className="font-objectivity text-xl max-w-2xl mx-auto mb-4">
+          20 años brindando confianza, estrategia y resultados en defensa fiscal.
+        </p>
+        <p className="font-objectivity text-lg text-gray-200 mb-8">
+          Tu aliado estratégico en devoluciones, defensa y consultoría integral.
+        </p>
+        <a
           href="/contacto"
-          className="bg-cyan-700 hover:bg-blue-600 px-8 py-3 rounded-lg font-semibold text-white transition"
+          className="bg-cyan-700 hover:bg-blue-600 px-10 py-4 rounded-lg font-semibold transition"
+        >
+          Contáctanos
+        </a>
+      </section>
+
+      {/* Carrusel + Texto */}
+      <section className="grid md:grid-cols-2 gap-8 py-16 px-10 bg-white items-center">
+        <div>
+          <Carrusel />
+        </div>
+        <div>
+          <h2 className="font-objectivity font-bold text-3xl text-[#1C547F] mb-4">
+            Quiénes Somos
+          </h2>
+          <p className="font-objectivity font-medium text-2xl text-[#144272] leading-relaxed">
+            TAXBUSINESS es una Firma especializada en la materia fiscal integrada
+            por abogados y contadores calificados para identificar e instrumentar con
+            éxito las mejores alternativas legales.
+          </p>
+        </div>
+      </section>
+
+      {/* Chess Talent */}
+      <section className="bg-[#FFFFFF] py-20 px-8 md:px-20 grid md:grid-cols-2 gap-12 items-center"
+      style={{
+              backgroundImage: `
+                linear-gradient(45deg, #f5f5f5 25%, transparent 25%), 
+                linear-gradient(-45deg, #f5f5f5 25%, transparent 25%), 
+                linear-gradient(45deg, transparent 75%, #f5f5f5 75%), 
+                linear-gradient(-45deg, transparent 75%, #f5f5f5 75%)
+              `,
+              backgroundSize: "40px 40px",
+              backgroundColor: "#FFFFFF"
+            }}
+            >
+        {/* Texto izquierda */}
+        <div>
+          <h2 className="text-4xl font-objectivity font-bold text-[#1C547F] mb-6">
+            Proyecto México Chess Talent
+          </h2>
+          
+          <p className="text-[#144272] font-objectivity font-medium text-xl leading-relaxed">
+            El Programa <strong>México Chess Talent</strong> es una iniciativa de TaxBusiness 
+            para apoyar a jugadores de ajedrez de alto rendimiento en México, 
+            proporcionando recursos y oportunidades para su desarrollo competitivo 
+            y personal.
+          </p>
+          <a 
+            href="/chessTalent"
+            className="mt-6 inline-block text-[#1C547F] text-lg font-semibold hover:underline"
           >
-            Contáctanos
-      </a>
-    
-    
+            Conoce más sobre México Chess Talent →
+          </a>
+        </div>
+
+        {/* Imagen derecha */}
+        <div className="flex justify-center">
+          <img
+            src={logo_chessTalent}
+            alt="Logotipo de México Chess Talent"
+            className="max-w-md"
+          />
+        </div>
+      </section>
+
+      {/* Servicios */}
+      <section className="bg-[#FFFFFF] py-20 px-8 md:px-20 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 className="text-4xl font-objectivity font-bold text-[#1C547F] mb-6">
+            Nuestros Servicios
+          </h2>
+          <ul className="space-y-4 text-[#144272] font-objectivity font-medium text-xl">
+            <li>💰 Devolución de impuestos con resultados comprobados</li>
+            <li>⚖️ Defensa fiscal en todas las etapas procesales</li>
+            <li>📊 Auditorías SAT con diagnóstico estratégico</li>
+            <li>📑 Consultoría jurídica y soluciones integrales</li>
+          </ul>
+
+          <a 
+            href="/servicios"
+            className="mt-6 inline-block text-[#1C547F] text-lg font-semibold hover:underline"
+          >
+            Conoce más de nuestros servicios →
+          </a>
+        </div>
+      </section>
+
+      {/* CTA final */}
+      <section className="bg-[#1D4D72] text-white py-16 text-center">
+        <h2 className="font-objectivity font-bold text-3xl mb-4">
+          Estrategia fiscal que conecta confianza con resultados
+        </h2>
+        <a
+          href="/contacto"
+          className="bg-cyan-700 hover:bg-blue-600 px-10 py-4 rounded-lg font-semibold transition"
+        >
+          Agenda tu cita
+        </a>
+      </section>
     </div>
   );
 }

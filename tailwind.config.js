@@ -16,7 +16,7 @@ export default {
         dark: "#1E293B",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif", "system-ui"],// Fuente corporativa
+        sans: ["Objectivity", "sans-serif", "system-ui"],// Fuente corporativa
       },
     },
   },
