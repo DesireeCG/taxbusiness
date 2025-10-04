@@ -10,4 +10,7 @@ export default [
     route("contacto", "routes/contacto.tsx"),
     route("chessTalent", "routes/chessTalent.tsx"),
 
+    // Ruta comodín para 404
+    route("*", "routes/NotFound.tsx"),
+
     ] satisfies RouteConfig;
