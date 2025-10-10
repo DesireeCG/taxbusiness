@@ -2,9 +2,9 @@ import { FaCoins, FaGraduationCap, FaDumbbell, FaPlaneDeparture } from "react-ic
 
 import ChessTalent_logo from "../images/ajedrez-chess-talent.png";
 import inversion_chess from "../images/inversion_chess.png";
-import Martinez from "../images/martinez-chess.png";
-import Sion from "../images/sion-chess.png";
-import Tania from "../images/tania-chess.png";
+import Martinez from "../images/martinez_chess.png";
+import Sion from "../images/sion_chess.png";
+import Tania from "../images/tania_chess.png";
 
 export const meta = () => {
   return [
