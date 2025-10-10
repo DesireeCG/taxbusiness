@@ -1,8 +1,8 @@
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center p-8">
-      <h1 className="text-5xl font-bold text-[#1C547F] mb-4">404</h1>
-      <p className="text-lg text-[#144272] mb-6">
+      <h1 className="text-8xl font-bold text-[#1C547F] mb-4">404</h1>
+      <p className="text-2xl text-[#144272] mb-6">
         Lo sentimos, la página que buscas no existe.
       </p>
       <a
